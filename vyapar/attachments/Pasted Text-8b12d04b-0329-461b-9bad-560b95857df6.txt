@@ -1,0 +1,1636 @@
+MASTER PROMPT — PREMIUM BILINGUAL BUSINESS MANAGEMENT APP
+
+APP NAME
+
+Create a premium Indian business management app called:
+
+VyaparOS — Smart Business Manager
+
+Tagline:
+“Hisab bhi Smart, Business bhi Smart.”
+
+The app must be designed for Indian shopkeepers, small businesses, wholesalers, retailers, distributors and family businesses.
+
+---
+
+1. CORE GOAL
+
+Build a business management app that is:
+
+- Premium
+- Extremely fast
+- Lightweight
+- Mobile-first
+- Offline-first
+- Hindi + English bilingual
+- Very easy for a non-technical shopkeeper
+- Professional enough for a growing business
+- Modern and polished
+- Data-safe
+- Extremely smooth on low-end Android phones
+
+The product experience should feel significantly more polished and complete than traditional Bahi-Khata apps.
+
+Do NOT simply copy OKCredit or any existing app.
+
+Take inspiration from the usefulness of digital khata apps, but create a unique product, unique UI and unique workflow.
+
+---
+
+2. IMPORTANT DEVELOPMENT RULE
+
+If an existing HTML/app file is provided:
+
+UPGRADE THE EXISTING APP.
+
+Do NOT unnecessarily rebuild it from scratch.
+
+Preserve:
+
+- Existing functionality
+- Existing data
+- Existing database
+- Existing IndexedDB structure
+- Existing screens
+- Existing working features
+
+Only modify architecture when necessary.
+
+If database changes are required, create a safe migration system.
+
+NEVER silently delete existing user data.
+
+---
+
+3. LANGUAGE SYSTEM
+
+The entire application must support:
+
+Hindi
+
+Example:
+
+- ग्राहक
+- सप्लायर
+- उधार
+- भुगतान
+- बिक्री
+- खरीद
+- स्टॉक
+- खर्च
+- कर्मचारी
+- वेतन
+- रिपोर्ट
+- कैशबुक
+
+English
+
+- Customers
+- Suppliers
+- Credit
+- Payment
+- Sales
+- Purchases
+- Stock
+- Expenses
+- Employees
+- Salary
+- Reports
+- Cash Book
+
+Add a simple language switch:
+
+हिंदी | English
+
+Language selection should instantly update the interface.
+
+Store language preference locally.
+
+Use simple Hindi, not difficult Sanskrit-style Hindi.
+
+---
+
+4. PREMIUM MOBILE UI
+
+Create a premium Android-style interface.
+
+Design principles:
+
+- Clean
+- Minimal
+- Spacious
+- Fast
+- Touch friendly
+- Modern cards
+- Rounded corners
+- Subtle shadows
+- Smooth animations
+- Excellent typography
+- Clear hierarchy
+- Large touch targets
+
+Avoid:
+
+- Clutter
+- Too many buttons
+- Tiny text
+- Heavy gradients
+- Excessive animations
+- Desktop-looking layouts
+- Unnecessary decorative elements
+
+The UI should feel like a modern premium mobile application, not a basic HTML website.
+
+---
+
+5. LIGHTWEIGHT REQUIREMENT
+
+Performance is extremely important.
+
+The app must:
+
+- Load quickly
+- Use minimal JavaScript
+- Avoid unnecessary libraries
+- Avoid heavy frameworks if they are not required
+- Avoid huge images
+- Avoid unnecessary network requests
+- Work smoothly on low-end Android devices
+- Use lazy rendering where useful
+- Render only required data
+- Avoid memory leaks
+- Debounce search
+- Avoid repeated database queries
+
+Target:
+
+Fast startup + smooth scrolling + instant navigation.
+
+---
+
+6. OFFLINE-FIRST SYSTEM
+
+The app should work without internet.
+
+Use:
+
+IndexedDB
+
+for local business data.
+
+Core functions must work offline:
+
+- Customers
+- Suppliers
+- Khata
+- Sales
+- Purchases
+- Stock
+- Expenses
+- Employees
+- Attendance
+- Salary
+- Cash Book
+- Reports
+
+Internet should NOT be required for basic business operations.
+
+---
+
+7. DASHBOARD
+
+Create an intelligent dashboard.
+
+Show:
+
+Today
+
+- Today's Sales
+- Today's Purchases
+- Today's Collection
+- Today's Expenses
+- Today's Profit estimate
+
+Business Snapshot
+
+- Total Receivable
+- Total Payable
+- Cash Balance
+- Bank Balance
+- Stock Value
+- Low Stock Items
+- Pending Payments
+
+Smart Alerts
+
+Examples:
+
+🔴 Payment overdue
+
+🟠 Stock running low
+
+🟡 Salary pending
+
+🟢 Today's collection completed
+
+Use compact cards.
+
+Do not overcrowd the dashboard.
+
+---
+
+8. SMART QUICK ACTIONS
+
+The dashboard should have a prominent Quick Action section.
+
+Examples:
+
+➕
+
+Add Customer
+
+💰 Receive Payment
+
+🧾 New Sale
+
+📦 Add Purchase
+
+📊 Stock
+
+💸 Expense
+
+👨‍💼 Employee
+
+Use one-tap actions.
+
+---
+
+9. SMART SEARCH
+
+Create a powerful global search.
+
+Search should find:
+
+- Customer
+- Supplier
+- Product
+- Invoice
+- Transaction
+- Employee
+
+Example:
+
+User searches:
+
+“Ramesh”
+
+Show:
+
+- Ramesh customer
+- Pending amount
+- Recent transactions
+- Phone number
+
+Product search should show:
+
+- Product name
+- Current price
+- Stock
+- Last purchase price
+- Last sale price
+
+Search must be extremely fast.
+
+---
+
+10. CUSTOMER / BAHI-KHATA
+
+Customer profile should show:
+
+- Name
+- Phone
+- Address
+- Total credit
+- Total received
+- Current balance
+- Transaction history
+
+Transaction types:
+
+Credit / उधार
+
+Customer owes money.
+
+Payment / भुगतान
+
+Customer paid money.
+
+Sale
+
+Product sold to customer.
+
+Return
+
+Customer returned product.
+
+---
+
+11. SMART CUSTOMER FEATURES
+
+Add:
+
+Payment Reminder
+
+Generate a ready-to-share WhatsApp/SMS style message.
+
+Example:
+
+“Namaste Ramesh ji,
+Aapke account mein ₹2,450 pending hai.
+Kripya payment kar dein.
+Dhanyavaad.”
+
+Hindi and English versions.
+
+Due Date
+
+Allow due date for every credit transaction.
+
+Overdue Indicator
+
+Show:
+
+- Due today
+- Overdue
+- Paid
+
+Customer Statement
+
+Generate printable/shareable statement.
+
+---
+
+12. SUPPLIER MANAGEMENT
+
+Supplier profile:
+
+- Supplier name
+- Phone
+- Address
+- Total payable
+- Paid amount
+- Current balance
+- Purchase history
+- Payment history
+
+Support:
+
+- Purchase
+- Payment
+- Return
+- Adjustment
+
+---
+
+13. INVENTORY / STOCK
+
+Create a powerful but lightweight stock system.
+
+Each product:
+
+- Product name
+- Category
+- SKU
+- Barcode
+- Purchase price
+- Sale price
+- Wholesale price
+- Current stock
+- Minimum stock
+- Unit
+- Supplier
+- Tax
+- Created date
+
+Units:
+
+- Piece
+- Kg
+- Gram
+- Litre
+- Box
+- Packet
+- Meter
+- Custom
+
+---
+
+14. UNIQUE STOCK FEATURES
+
+Smart Low Stock
+
+Automatically identify products below minimum stock.
+
+Stock Movement
+
+Show:
+
++ Purchase
+
+- Sale
+
++/- Adjustment
+
++ Return
+
+Stock History
+
+Show exactly:
+
+“Why did stock change?”
+
+Example:
+
+Product: Sugar
+
+Purchase +50
+
+Sale -10
+
+Adjustment -2
+
+Current Stock: 38
+
+---
+
+15. PRICE HISTORY
+
+Maintain product price history.
+
+Show:
+
+- Previous purchase price
+- Current purchase price
+- Previous sale price
+- Current sale price
+- Price change date
+
+Useful for wholesalers and retailers.
+
+---
+
+16. SMART PRICE LOOKUP
+
+When selecting a product during sale:
+
+Show:
+
+Last Sale Price
+
+Current Sale Price
+
+Last Purchase Price
+
+This helps prevent accidental under-selling.
+
+---
+
+17. SALES / POS
+
+Create a fast mobile POS.
+
+Features:
+
+- Select customer
+- Add products
+- Quantity
+- Discount
+- Tax
+- Total
+- Paid
+- Credit
+- Balance
+
+Support:
+
+Cash
+
+UPI
+
+Bank
+
+Credit
+
+Mixed payment
+
+---
+
+18. QUICK SALE MODE
+
+Create an optional ultra-fast mode.
+
+Flow:
+
+Product → Quantity → Payment → Done
+
+Minimum taps.
+
+This should be extremely fast for busy shopkeepers.
+
+---
+
+19. PURCHASE MANAGEMENT
+
+Purchase screen:
+
+- Supplier
+- Products
+- Quantity
+- Purchase price
+- Discount
+- Tax
+- Total
+- Paid
+- Credit
+
+Automatically update stock.
+
+Automatically update supplier balance.
+
+---
+
+20. EXPENSE MANAGEMENT
+
+Categories:
+
+- Rent
+- Electricity
+- Transport
+- Salary
+- Repair
+- Tea/Food
+- Packaging
+- Internet
+- Other
+
+Allow custom categories.
+
+Every expense:
+
+- Amount
+- Date
+- Category
+- Note
+- Payment mode
+
+---
+
+21. CASH BOOK
+
+Create simple cash management.
+
+Show:
+
+Opening Balance
+
++ Sales Collection
+
++ Customer Payments
+
+- Purchases
+
+- Expenses
+
+- Supplier Payments
+
+- Salary
+
+= Closing Balance
+
+Allow:
+
+Cash
+
+Bank
+
+UPI
+
+Separate balances.
+
+---
+
+22. EMPLOYEE MANAGEMENT
+
+Employee profile:
+
+- Name
+- Role
+- Phone
+- Salary type
+- Salary
+- Joining date
+- Advance
+- Attendance
+- Leave
+- Salary history
+
+---
+
+23. ADVANCED ATTENDANCE
+
+Support:
+
+Present
+
+Absent
+
+Half Day
+
+Leave
+
+Paid Leave
+
+Unpaid Leave
+
+Weekly Off
+
+Holiday
+
+Allow custom status if needed.
+
+---
+
+24. SMART LEAVE SYSTEM
+
+Leave deduction must be flexible.
+
+User can choose:
+
+Full Day
+
+Automatically calculate deduction.
+
+Half Day
+
+Automatically calculate 50% deduction.
+
+Paid Leave
+
+No salary deduction.
+
+Unpaid Leave
+
+Automatic deduction.
+
+Custom Deduction
+
+User can manually enter:
+
+₹50
+
+₹100
+
+₹250
+
+₹500
+
+etc.
+
+Also allow:
+
+Custom Half-Day Amount
+
+Example:
+
+Half day deduction = ₹300
+
+instead of automatically calculating it.
+
+Add:
+
+Leave Reason
+
+Example:
+
+“Family function”
+
+“Personal work”
+
+“Sick”
+
+“Other”
+
+---
+
+25. SALARY SYSTEM
+
+Salary calculation must be transparent.
+
+Formula:
+
+Basic Salary
+
++ Bonus
+
++ Extra Payment
+
+- Unpaid Leave Deduction
+
+- Custom Leave Deduction
+
+- Advance
+
+- Other Deduction
+
+= Net Salary
+
+Show complete calculation.
+
+Never hide deductions.
+
+---
+
+26. EMPLOYEE ADVANCE SYSTEM
+
+Do NOT treat advance as only one editable number.
+
+Maintain transaction history.
+
+Example:
+
+01 Sep → Advance ₹2,000
+
+10 Sep → Advance ₹1,000
+
+20 Sep → Adjusted ₹1,500
+
+Remaining Advance = ₹1,500
+
+Every transaction must have date and note.
+
+---
+
+27. REPORTS
+
+Create lightweight professional reports.
+
+Sales Report
+
+Daily
+
+Weekly
+
+Monthly
+
+Custom date
+
+Purchase Report
+
+Daily
+
+Weekly
+
+Monthly
+
+Custom date
+
+Profit Report
+
+Sales
+
+- Cost
+
+- Expenses
+
+= Estimated Profit
+
+Customer Report
+
+Receivable
+
+Supplier Report
+
+Payable
+
+Stock Report
+
+Stock value
+
+Low stock
+
+Expense Report
+
+Category-wise
+
+Employee Report
+
+Attendance
+
+Salary
+
+Leave
+
+---
+
+28. SMART BUSINESS INSIGHTS
+
+Create a small section:
+
+Business Insights
+
+Examples:
+
+“Sales are higher than last week.”
+
+“3 products are running low.”
+
+“₹12,500 customer payments are pending.”
+
+“Your highest-selling product this month is…”
+
+“Your highest expense category is…”
+
+These insights must be calculated from actual local data.
+
+Never generate fake statistics.
+
+---
+
+29. UNIQUE FEATURE — DAILY BUSINESS SUMMARY
+
+At the end of the day show:
+
+आज का हिसाब
+
+Sales: ₹____
+
+Purchase: ₹____
+
+Collection: ₹____
+
+Expense: ₹____
+
+Estimated Profit: ₹____
+
+Pending Collection: ₹____
+
+Low Stock: ___ items
+
+Allow:
+
+Share Daily Summary
+
+---
+
+30. UNIQUE FEATURE — BUSINESS HEALTH SNAPSHOT
+
+Create a compact dashboard widget:
+
+Cash
+
+Receivable
+
+Payable
+
+Stock
+
+Profit
+
+Expenses
+
+Use simple visual indicators.
+
+Do NOT use misleading financial claims.
+
+---
+
+31. UNIQUE FEATURE — ONE-TAP COLLECTION
+
+From customer profile:
+
+Receive Payment
+
+Tap → Amount → Payment Mode → Save
+
+No unnecessary forms.
+
+---
+
+32. UNIQUE FEATURE — SMART REPEAT SALE
+
+Allow user to repeat a previous sale.
+
+Example:
+
+Customer Ramesh
+
+Previous Sale:
+
+Sugar × 5
+
+Rice × 2
+
+Oil × 3
+
+Button:
+
+Repeat Sale
+
+This should create a new sale with editable quantities.
+
+---
+
+33. UNIQUE FEATURE — FAVORITE PRODUCTS
+
+Allow frequently sold products to be marked as:
+
+⭐ Favorite
+
+Show favorites at the top of Quick Sale.
+
+---
+
+34. UNIQUE FEATURE — RECENT ACTIONS
+
+Dashboard should show:
+
+Recent Sale
+
+Recent Payment
+
+Recent Purchase
+
+Recent Expense
+
+Tap to open details.
+
+---
+
+35. RECEIPT SYSTEM
+
+Create clean mobile receipt.
+
+Include:
+
+Business Name
+
+Customer
+
+Items
+
+Quantity
+
+Rate
+
+Discount
+
+Tax
+
+Total
+
+Paid
+
+Balance
+
+Date
+
+Invoice Number
+
+Allow:
+
+Print
+
+Share
+
+Download/Save where supported
+
+---
+
+36. BACK BUTTON — VERY IMPORTANT
+
+Because this app runs on Android browsers/webview:
+
+Implement proper internal navigation.
+
+Android back button must NOT immediately close the browser/app.
+
+Use:
+
+- History API
+- pushState
+- popstate
+- Internal navigation stack
+
+Behavior:
+
+If modal open → close modal.
+
+If nested page open → go back to previous page.
+
+If profile open → return to list.
+
+If form open → return to previous screen.
+
+If dashboard is reached → optionally show:
+
+“क्या आप ऐप से बाहर निकलना चाहते हैं?”
+
+Also add a visible back button on inner screens.
+
+---
+
+37. BACKUP & RESTORE
+
+Create:
+
+Export Backup
+
+Export all business data.
+
+Import Backup
+
+Restore data safely.
+
+JSON Backup
+
+Human-readable backup.
+
+Before restore:
+
+Show warning.
+
+Never overwrite data without confirmation.
+
+Add backup date/time.
+
+---
+
+38. DATA SAFETY
+
+Important:
+
+Never delete data accidentally.
+
+Before destructive action:
+
+Show confirmation.
+
+For example:
+
+“क्या आप यह ग्राहक हटाना चाहते हैं?”
+
+Use soft-delete where practical.
+
+Keep database versioning.
+
+---
+
+39. SETTINGS
+
+Settings should include:
+
+- Business name
+- Owner name
+- Phone
+- Address
+- GST number
+- Currency
+- Language
+- Theme
+- Backup
+- Restore
+- Data reset
+- Invoice settings
+
+---
+
+40. DARK + LIGHT MODE
+
+Support:
+
+🌙 Dark Mode
+
+☀️ Light Mode
+
+Use CSS variables.
+
+Remember user's preference.
+
+Both themes must look premium.
+
+---
+
+41. PREMIUM ANIMATIONS
+
+Use subtle animations:
+
+- Page transition
+- Card appearance
+- Button feedback
+- Toast
+- Modal
+- Success animation
+
+Keep animations lightweight.
+
+No unnecessary animation.
+
+---
+
+42. TOAST NOTIFICATIONS
+
+Examples:
+
+“Customer added successfully”
+
+“Payment saved”
+
+“Sale completed”
+
+“Stock updated”
+
+“₹500 received”
+
+“Employee leave saved”
+
+Use small premium toast notifications.
+
+---
+
+43. EMPTY STATES
+
+Never show an ugly blank screen.
+
+Example:
+
+No Customers
+
+“अभी कोई ग्राहक नहीं है।”
+
+Button:
+
++ ग्राहक जोड़ें
+
+No Products
+
+“अपना पहला product जोड़ें।”
+
+---
+
+44. ERROR HANDLING
+
+Never show technical errors to normal users.
+
+Instead:
+
+“कुछ समस्या हुई। कृपया दोबारा प्रयास करें।”
+
+For developers, use console logging.
+
+---
+
+45. MOBILE KEYBOARD UX
+
+Forms must work properly with Android keyboard.
+
+Requirements:
+
+- Correct input types
+- Numeric keyboard for amounts
+- Phone keyboard for phone
+- Date inputs
+- Auto focus where useful
+- Keyboard should not cover important buttons
+- Bottom action buttons should remain accessible
+
+---
+
+46. ACCESSIBILITY
+
+Use:
+
+- Large touch targets
+- Good contrast
+- Readable font
+- Proper labels
+- Keyboard accessibility
+- Screen-reader friendly labels where practical
+
+---
+
+47. RESPONSIVE DESIGN
+
+Primary target:
+
+Android mobile 360px–430px width.
+
+Also support:
+
+Tablet
+
+Desktop
+
+But do NOT let desktop design ruin the mobile experience.
+
+Mobile comes first.
+
+---
+
+48. NO HEAVY DEPENDENCIES
+
+Prefer:
+
+HTML
+
+CSS
+
+Vanilla JavaScript
+
+IndexedDB
+
+Small utility code
+
+Only use external libraries if absolutely necessary.
+
+The final application should remain lightweight.
+
+---
+
+49. SECURITY
+
+Do not expose sensitive data unnecessarily.
+
+Validate:
+
+- Amounts
+- Dates
+- IDs
+- Quantities
+
+Prevent accidental duplicate transactions.
+
+Generate unique invoice/transaction IDs.
+
+---
+
+50. PERFORMANCE RULE
+
+Avoid rendering thousands of DOM elements at once.
+
+Use:
+
+- Pagination
+- Lazy rendering
+- Search filtering
+- Efficient IndexedDB queries
+- Debouncing
+
+The application should remain responsive even with a large amount of business data.
+
+---
+
+51. DESIGN SYSTEM
+
+Use a consistent design system:
+
+Primary color
+
+Accent color
+
+Success
+
+Warning
+
+Danger
+
+Background
+
+Surface
+
+Text
+
+Muted text
+
+Border
+
+Use CSS variables.
+
+Do not hard-code colors everywhere.
+
+---
+
+52. COMPONENT STYLE
+
+Reusable UI components:
+
+- Card
+- Button
+- Icon Button
+- Input
+- Select
+- Modal
+- Bottom Sheet
+- Toast
+- Badge
+- List Item
+- Stat Card
+- Empty State
+- Confirmation Dialog
+
+Maintain consistent styling.
+
+---
+
+53. BOTTOM NAVIGATION
+
+For mobile:
+
+Home
+
+Khata
+
+Stock
+
+Sales
+
+More
+
+Keep the most important actions within one or two taps.
+
+---
+
+54. MORE MENU
+
+More section can contain:
+
+Purchases
+
+Expenses
+
+Employees
+
+Attendance
+
+Salary
+
+Cash Book
+
+Reports
+
+Backup
+
+Settings
+
+---
+
+55. SMART DATE FILTER
+
+Every important report/list should support:
+
+Today
+
+Yesterday
+
+This Week
+
+This Month
+
+Custom Date
+
+Use easy date chips.
+
+---
+
+56. SEARCH + FILTER
+
+Lists should support:
+
+Search
+
+Sort
+
+Filter
+
+Examples:
+
+Customers:
+
+All
+
+Due
+
+Paid
+
+Overdue
+
+Products:
+
+All
+
+Low Stock
+
+Out of Stock
+
+Favorites
+
+---
+
+57. ZERO-DATA DEMO EXPERIENCE
+
+For a fresh installation:
+
+Show helpful sample/demo data ONLY if appropriate.
+
+Clearly label demo data.
+
+Provide:
+
+Clear Demo Data
+
+button.
+
+Never mix demo data with real user data without clear indication.
+
+---
+
+58. PWA SUPPORT
+
+If technically appropriate, make the app installable as a PWA.
+
+Include:
+
+manifest
+
+service worker
+
+offline caching
+
+app icons
+
+standalone mode
+
+But keep everything lightweight.
+
+---
+
+59. NO INTERNET DEPENDENCY FOR CORE FEATURES
+
+After installation/cache:
+
+Core business operations should continue without internet.
+
+Do not make core screens dependent on remote APIs.
+
+---
+
+60. FINAL UX STANDARD
+
+Before considering the app complete, test the entire flow:
+
+New customer
+
+→ Add credit
+
+→ Receive payment
+
+→ View balance
+
+→ New sale
+
+→ Stock decreases
+
+→ New purchase
+
+→ Stock increases
+
+→ Supplier balance updates
+
+→ Add expense
+
+→ Cash balance updates
+
+→ Add employee
+
+→ Attendance
+
+→ Leave
+
+→ Salary calculation
+
+→ Salary payment
+
+→ Reports
+
+→ Backup
+
+→ Restore
+
+Everything must remain consistent.
+
+---
+
+61. IMPORTANT — DO NOT OVERBUILD
+
+The app should feel powerful without feeling complicated.
+
+Whenever possible:
+
+1 screen → 1 clear purpose
+
+1 task → minimum taps
+
+1 number → clear meaning
+
+Do not add features just for the sake of adding features.
+
+---
+
+62. FINAL QUALITY CHECK
+
+Before delivery verify:
+
+✓ No broken buttons
+
+✓ No dead navigation
+
+✓ Android back works
+
+✓ Visible back button works
+
+✓ Modals close correctly
+
+✓ Data persists after refresh
+
+✓ Offline functionality works
+
+✓ Backup works
+
+✓ Restore works
+
+✓ Search works
+
+✓ Filters work
+
+✓ Salary calculations work
+
+✓ Half-day calculations work
+
+✓ Paid/unpaid leave works
+
+✓ Custom ₹ deduction works
+
+✓ Stock calculations work
+
+✓ Customer balance works
+
+✓ Supplier balance works
+
+✓ Cash book works
+
+✓ Reports calculate from real data
+
+✓ Hindi language works
+
+✓ English language works
+
+✓ Dark mode works
+
+✓ Light mode works
+
+✓ Mobile layout works
+
+✓ No horizontal scrolling
+
+✓ No unnecessary libraries
+
+✓ Fast startup
+
+✓ No accidental data deletion
+
+---
+
+FINAL PRODUCT REQUIREMENT
+
+The final application must feel like:
+
+A premium modern Indian business operating system — not merely a digital khata.
+
+It should combine:
+
+Bahi-Khata + Stock + POS + Purchases + Expenses + Employees + Salary + Cash Book + Reports + Business Insights
+
+inside one simple mobile-first application.
+
+The guiding principle is:
+
+“Powerful inside. Simple outside.”
+
+Do not copy OKCredit.
+
+Do not copy CineVerse.
+
+Use the best usability principles from modern apps and create an original identity for VyaparOS.
+
+The final UI must be:
+
+Premium + Unique + Lightweight + Fast + Hindi-first + English-supported + Offline-first + Mobile-first.

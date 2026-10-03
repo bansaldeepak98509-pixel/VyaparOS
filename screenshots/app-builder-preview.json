@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "VyaparOS",
+      "hasCanvas": false,
+      "bodyTextLen": 105,
+      "bodyTextHash": "45b53a7b10ea7e12ec87e8f6d71e8fdd28c4eaab7b6e8e415461b613e2c25a93",
+      "bodyTextPrefix": "VyaparOS Hisab bhi Smart, Business bhi Smart. भाषा चुनें हिंदी स",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "VyaparOS",
+      "hasCanvas": false,
+      "bodyTextLen": 105,
+      "bodyTextHash": "45b53a7b10ea7e12ec87e8f6d71e8fdd28c4eaab7b6e8e415461b613e2c25a93",
+      "bodyTextPrefix": "VyaparOS Hisab bhi Smart, Business bhi Smart. भाषा चुनें हिंदी स",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,1 @@
+import{o as e}from"./useSelector-B_P3tCcN.js";import{t}from"./pos-C62sB2TQ.js";var n=e(),r=()=>(0,n.jsx)(t,{kind:`sale`});export{r as component};

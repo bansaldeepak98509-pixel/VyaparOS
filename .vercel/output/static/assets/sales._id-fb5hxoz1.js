@@ -1,0 +1,1 @@
+import{n as e}from"./receipt-DCqi3HOj.js";var t=e;export{t as component};

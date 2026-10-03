@@ -1,0 +1,177 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Figtree", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Noto Serif Devanagari", ui-serif, Georgia, serif;
+
+  --color-background: #f3f0e8;
+  --color-foreground: #1a1916;
+  --color-card: #fffdf8;
+  --color-card-foreground: #1a1916;
+  --color-popover: #fffdf8;
+  --color-popover-foreground: #1a1916;
+  --color-primary: #1f4f47;
+  --color-primary-foreground: #f7f4ec;
+  --color-secondary: #e8e2d4;
+  --color-secondary-foreground: #1a1916;
+  --color-muted: #e7e1d4;
+  --color-muted-foreground: #6b655c;
+  --color-accent: #dfe8e4;
+  --color-accent-foreground: #1f4f47;
+  --color-destructive: #a33b2a;
+  --color-destructive-foreground: #fffdf8;
+  --color-border: #ddd6c8;
+  --color-input: #ddd6c8;
+  --color-ring: #1f4f47;
+  --color-success: #2d6a4f;
+  --color-success-foreground: #f3f0e8;
+  --color-warning: #8a5a28;
+  --color-warning-foreground: #f3f0e8;
+  --color-info: #3d5a6c;
+  --color-paper: #f3f0e8;
+  --color-ink: #1a1916;
+  --color-sage: #7a9e96;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border:
+    0px 0px 0px 1px rgba(26, 25, 22, 0.06),
+    0px 1px 2px -1px rgba(26, 25, 22, 0.06),
+    0px 2px 4px 0px rgba(26, 25, 22, 0.04);
+  --shadow-border-hover:
+    0px 0px 0px 1px rgba(26, 25, 22, 0.08),
+    0px 1px 2px -1px rgba(26, 25, 22, 0.08),
+    0px 2px 4px 0px rgba(26, 25, 22, 0.06);
+
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark {
+  --color-background: #131311;
+  --color-foreground: #f1eee6;
+  --color-card: #1c1b18;
+  --color-card-foreground: #f1eee6;
+  --color-popover: #1c1b18;
+  --color-popover-foreground: #f1eee6;
+  --color-primary: #8fbfb4;
+  --color-primary-foreground: #102824;
+  --color-secondary: #26251f;
+  --color-secondary-foreground: #f1eee6;
+  --color-muted: #26251f;
+  --color-muted-foreground: #a39e93;
+  --color-accent: #243330;
+  --color-accent-foreground: #d5ebe6;
+  --color-destructive: #e07060;
+  --color-destructive-foreground: #1a1916;
+  --color-border: rgba(241, 238, 230, 0.1);
+  --color-input: rgba(241, 238, 230, 0.12);
+  --color-ring: #8fbfb4;
+  --color-success: #7dba9a;
+  --color-success-foreground: #102418;
+  --color-warning: #d4a574;
+  --color-warning-foreground: #1a140c;
+  --color-info: #8eacbe;
+  --color-paper: #131311;
+  --color-ink: #f1eee6;
+  --color-sage: #8fbfb4;
+  --shadow-border: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(255, 255, 255, 0.13);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    min-height: 100dvh;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-border);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.app-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-y-base, 8px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-enter 250ms var(--ease-smooth-out) both;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .only-print {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+.only-print {
+  display: none;
+}

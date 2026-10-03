@@ -1,0 +1,78 @@
+name: Build VyaparOS APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_url:
+        description: "Live HTTPS URL of the deployed VyaparOS web app"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build-apk:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Validate web app
+        run: npm run typecheck
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Prepare Capacitor web shell
+        run: |
+          mkdir -p www
+          test -f www/index.html
+
+      - name: Set VyaparOS URL
+        env:
+          INPUT_URL: ${{ inputs.app_url }}
+          REPO_URL: ${{ vars.VYAPAROS_URL }}
+        run: |
+          URL="$INPUT_URL"
+          if [ -z "$URL" ]; then URL="$REPO_URL"; fi
+          if [ -z "$URL" ]; then
+            echo "ERROR: No VyaparOS URL was provided."
+            echo "Run this workflow manually and enter the live HTTPS URL."
+            exit 1
+          fi
+          case "$URL" in
+            https://*) ;;
+            *) echo "ERROR: URL must start with https://"; exit 1 ;;
+          esac
+          echo "VYAPAROS_URL=$URL" >> "$GITHUB_ENV"
+          echo "Using VyaparOS URL: $URL"
+
+      - name: Add Android platform
+        run: npx cap add android
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: VyaparOS-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
