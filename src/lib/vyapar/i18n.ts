@@ -333,6 +333,7 @@ const hi = {
   resetWarn: "सारा बिज़नेस डेटा हमेशा के लिए हट जाएगा।",
   resetOk: "डेटा रीसेट हो गया",
   backupExported: "बैकअप तैयार है",
+  backupExportFailed: "बैकअप एक्सपोर्ट विफल रहा। कृपया पुनः प्रयास करें.",
   clearDemoWarn: "सारा डेमो डेटा हट जाएगा। आपका अपना डेटा रहेगा।",
   demoCleared: "डेमो डेटा हटा दिया गया",
 
@@ -722,6 +723,7 @@ const en: { [K in keyof typeof hi]: string } = {
   resetWarn: "All business data will be permanently deleted.",
   resetOk: "Data reset",
   backupExported: "Backup ready",
+  backupExportFailed: "Backup export failed. Please try again.",
   clearDemoWarn: "All demo records will be removed. Your own data stays.",
   demoCleared: "Demo data cleared",
 

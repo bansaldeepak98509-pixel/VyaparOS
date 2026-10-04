@@ -1,3 +1,4 @@
+import { printDocument } from "@/lib/native-print";
 import { useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "@tanstack/react-router";
 import { MessageCircle, Repeat2, ScrollText, Trash2 } from "lucide-react";
@@ -176,7 +177,7 @@ export function PartyScreen() {
           <button
             type="button"
             className="inline-flex h-11 items-center gap-2 rounded-lg bg-card px-3 text-sm shadow-card"
-            onClick={() => window.print()}
+            onClick={printDocument}
           >
             {t("printStatement")}
           </button>

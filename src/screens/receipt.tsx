@@ -1,3 +1,4 @@
+import { printDocument } from "@/lib/native-print";
 import { useParams } from "@tanstack/react-router";
 import { Share2 } from "lucide-react";
 import { Amount, EmptyState, PageHeader } from "@/components/app/primitives";
@@ -64,7 +65,7 @@ function ReceiptView({ id, backTo }: { id: string; backTo: string }) {
             <Button variant="ghost" size="icon" onClick={() => void share()} aria-label={t("share")}>
               <Share2 className="size-4" />
             </Button>
-            <Button variant="ghost" size="sm" onClick={() => window.print()}>
+            <Button variant="ghost" size="sm" onClick={printDocument}>
               {t("print")}
             </Button>
           </div>

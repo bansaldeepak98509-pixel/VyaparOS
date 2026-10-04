@@ -1,3 +1,7 @@
+import { Capacitor } from "@capacitor/core";
+import { Directory, Encoding, Filesystem } from "@capacitor/filesystem";
+import { Share } from "@capacitor/share";
+
 import { useRef, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Field, PageHeader } from "@/components/app/primitives";
@@ -221,7 +225,7 @@ export function SettingsScreen() {
             <AlertDialogAction onClick={() => void resetAll()}>{t("confirm")}</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
+     </AlertDialog>
     </div>
   );
 }
